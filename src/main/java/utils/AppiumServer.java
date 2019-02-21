@@ -31,6 +31,6 @@ public class AppiumServer{
 //        }
 //        else
         service.start();
-        Log.info(" ----------------------   Appium server has started at " + service.getUrl().toString() + Name + "  ------------------------");
+        Log.info(" ----------------------  Appium server has started at " + service.getUrl().toString() +"("+Name+")" + "  ------------------------");
     }
 }
