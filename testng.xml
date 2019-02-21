@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Test-class Suite" verbose="1" parallel="tests" thread-count="2">
+
+    <!--<test name="1">-->
+        <!--<parameter name="test-name" value="גירסה פרטנר טי וי 2.29.8 על גירסת ממיר 76" />-->
+        <!--<parameter name="deviceName" value="Kfir" />-->
+        <!--<parameter name="UDID" value="192.168.1.16:5555" />-->
+        <!--<parameter name="platformVersion" value="ANDROID" />-->
+        <!--<parameter name="URL" value="127.0.0.1:4726/wd/hub" />-->
+        <!--<parameter name="AppiumServer" value="Kfir\\node_kfir.bat"/>-->
+        <!--<parameter name="AdbLog" value="Kfir\\adb_kfir.bat"/>-->
+        <!--<parameter name="ip" value="192.168.1.16"/>-->
+        <!--<classes>-->
+            <!--<class name="zapping" />-->
+        <!--</classes>-->
+    <!--</test>-->
+
+
+<test name="2">
+<parameter name="test-name" value="גירסת פרטנר טי וי 2.33.3 על גירסת ממיר 81" />
+    <parameter name="deviceName" value="192.168.1.26:5555" />
+    <parameter name="udid" value="192.168.1.26:5555" />
+    <parameter name="platformVersion" value="ANDROID" />
+    <parameter name="AppiumServer" value="Eyal\\node_eyal.bat"/>
+    <parameter name="AdbLog" value="Eyal\\adb_eyal.bat"/>
+    <parameter name="ip" value="192.168.1.26"/>
+    <parameter name="port" value="4728"/>
+    <parameter name="bpPort" value="8000"/>
+    <parameter name="appPackage" value="com.ifeelsmart.common.IFSNativeActivity"/>
+    <parameter name="appActivity" value="com.ifeelsmart.smartui"/>
+    <parameter name="Name" value="Eyal"/>
+    <!--<parameter name="appActivity" value="com.netflix.ninja.MainActivity"/>-->
+    <!--<parameter name="appPackage" value="com.netflix.ninja"/>-->
+    <classes>
+    <class name="zapping" />
+</classes>
+</test>
+
+
+
+    <test name="3">
+        <parameter name="test-name" value="82" />
+        <parameter name="deviceName" value="192.168.1.3:5555" />
+        <parameter name="udid" value="192.168.1.3:5555" />
+        <parameter name="platformVersion" value="ANDROID" />
+        <parameter name="AdbLog" value="Shlomi\\adb_shlomi.bat"/>
+        <parameter name="ip" value="192.168.1.3"/>
+        <parameter name="port" value="4723"/>
+        <parameter name="bpPort" value="8001"/>
+        <parameter name="appPackage" value="com.ifeelsmart.common.IFSNativeActivity"/>
+        <parameter name="appActivity" value="com.ifeelsmart.smartui"/>
+        <parameter name="Name" value="Shlomi"/>
+        <!--<parameter name="appActivity" value="com.netflix.ninja.MainActivity"/>-->
+        <!--<parameter name="appPackage" value="com.netflix.ninja"/>-->
+        <classes>
+            <class name="zapping" />
+        </classes>
+    </test>
+
+
+
+    <!--<test name="4">-->
+        <!--<parameter name="test-name" value="volt" />-->
+        <!--<parameter name="platformVersion" value="Chrome" />-->
+        <!--<classes>-->
+            <!--<class name="volt.login" />-->
+        <!--</classes>-->
+    <!--</test>-->
+
+
+
+    <!--<test name="5">-->
+        <!--<parameter name="test-name" value="גירסת פרטנר טי וי 2.29.5 על גירסת ממיר 75" />-->
+        <!--<parameter name="deviceName" value="Rodman" />-->
+        <!--<parameter name="UDID" value="192.168.1.15:5555" />-->
+        <!--<parameter name="platformVersion" value="ANDROID" />-->
+        <!--<parameter name="URL" value="127.0.0.1:4726/wd/hub" />-->
+        <!--<parameter name="AppiumServer" value="RODMAN\\node_Rodman.bat"/>-->
+        <!--<parameter name="AdbLog" value="RODMAN\\adb_Rodman.bat"/>-->
+        <!--<parameter name="ip" value="192.168.1.15"/>-->
+        <!--<classes>-->
+            <!--<class name="zapping" />-->
+        <!--</classes>-->
+    <!--</test>-->
+
+
+
+    <!--<test name="6">-->
+        <!--<parameter name="test-name" value="גירסת פרטנר טי וי 2.29.5 על גירסת ממיר 75" />-->
+        <!--<parameter name="deviceName" value="Bird" />-->
+        <!--<parameter name="UDID" value="192.168.1.18:5555" />-->
+        <!--<parameter name="platformVersion" value="ANDROID" />-->
+        <!--<parameter name="URL" value="127.0.0.1:4728/wd/hub" />-->
+        <!--<parameter name="AppiumServer" value="BIRD\\node_Bird.bat"/>-->
+        <!--<parameter name="AdbLog" value="BIRD\\adb_Bird.bat"/>-->
+        <!--<parameter name="ip" value="192.168.1.18"/>-->
+        <!--<classes>-->
+            <!--<class name="zapping" />-->
+        <!--</classes>-->
+    <!--</test>-->
+
+    </suite>
