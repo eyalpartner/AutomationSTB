@@ -26,12 +26,6 @@ public class BaseTestNetflix {
     public DesiredCapabilities cap = new DesiredCapabilities();
     BaseTest baseTest = new BaseTest();
 
-//    static AppiumDriverLocalService service;
-
-//    public BaseTest() throws IOException {
-//    }
-
-    //"appPackage","appActivity",
     @Parameters({"Name", "appPackage", "appActivity", "port", "deviceName", "platformVersion", "AdbLog", "udid", "bpPort", "ip"})
     //Parameters that reads from testng.xml
     @BeforeClass
