@@ -24,6 +24,7 @@ public class zapping extends BaseTest {
         Boolean act = activity.equals("com.ifeelsmart.common.IFSNativeActivityImpl");
         Log.info("Demonstation for Golan Belo the king is starting now !!!");
         Log.info("All is good !!!");
+        Log.info("Shabat Shalom");
         while (act) {
             activity = driver.currentActivity();
             act = activity.equals("com.ifeelsmart.common.IFSNativeActivityImpl");
