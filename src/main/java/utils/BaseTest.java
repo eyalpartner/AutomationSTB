@@ -2,17 +2,20 @@ package utils;
 import com.google.common.collect.ImmutableMap;
 import com.sun.mail.imap.protocol.Item;
 import io.appium.java_client.AppiumDriver;
-
+import org.apache.commons.codec.binary.Base64;
+import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.android.AndroidKeyCode;
+import io.appium.java_client.imagecomparison.*;
 import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.remote.MobileCapabilityType;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServiceBuilder;
 import io.appium.java_client.service.local.flags.AndroidServerFlag;
 import io.appium.java_client.service.local.flags.GeneralServerFlag;
+import io.netty.handler.codec.base64.Base64Encoder;
 import org.apache.commons.exec.CommandLine;
 import org.apache.commons.exec.DefaultExecuteResultHandler;
 import org.apache.commons.exec.DefaultExecutor;
@@ -21,15 +24,25 @@ import org.apache.commons.io.FileUtils;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.aspectj.lang.annotation.After;
+import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.logging.LogEntry;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.*;
+import utils.FactoryClasses.keyCode;
+
+import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.awt.image.DataBuffer;
+import java.awt.image.DataBufferByte;
 import java.io.*;
 import java.lang.management.ManagementFactory;
 import java.lang.reflect.Field;
+import java.net.URISyntaxException;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -37,11 +50,15 @@ import java.text.DateFormat;
 import java.text.Format;
 import java.text.SimpleDateFormat;
 import java.util.*;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
+import java.util.regex.Pattern;
 
-import static org.testng.Assert.assertFalse;
-import static org.testng.Assert.assertTrue;
+
+import javax.imageio.ImageIO;
+
+import static org.testng.Assert.*;
 
 public class BaseTest {
     public AndroidDriver driver;
@@ -60,14 +77,12 @@ public class BaseTest {
 //    }
 
 
-
-
-    @Parameters({"Name","appPackage", "appActivity", "port", "deviceName", "platformVersion", "AdbLog", "udid", "bpPort", "ip"})
+    @Parameters({"Name", "appPackage", "appActivity", "port", "deviceName", "platformVersion", "AdbLog", "udid", "bpPort", "ip"})
     //Parameters that reads from testng.xml
     @BeforeClass
-    public void Capabilities(String Name,String appActivity, String appPackage, String port, String deviceName, String platformVersion, String AdbLog, String udid, String bpPort, String ip) throws Exception {
+    public void Capabilities(String Name, String appActivity, String appPackage, String port, String deviceName, String platformVersion, String AdbLog, String udid, String bpPort, String ip) throws Exception {
         cap.setCapability("deviceName", deviceName);
-        cap.setCapability("Name",Name);
+        cap.setCapability("Name", Name);
         cap.setCapability("udid", udid);
         cap.setCapability("port", port);
         cap.setCapability("bpPort", bpPort);
@@ -80,15 +95,17 @@ public class BaseTest {
         cap.setCapability("skipDeviceInitialization", true);
         cap.setCapability("skipServerInstallation", true);
         cap.setCapability("ip", ip);
+        cap.setCapability("deviceReadyTimeout", 30);
         cmd(port);
-        getRefreashRate(ip,deviceName);
+        getRefreashRate(ip, deviceName);
         killifs(ip); // //kill the ifs app before starting the session,No clear cache or data, works only with root and debug FW
         checkDevices();
         AppiumServer server = new AppiumServer();
-        server.AppiumServer(port, bpPort,Name);
+        server.AppiumServer(port, bpPort, Name);
         driver = new AndroidDriver<>(new URL("http://0.0.0.0:" + port + "/wd/hub"), cap);
         logCat(ip);
-        driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
+
+//        driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
 
 
         Thread thread = new Thread(new Runnable() {
@@ -98,7 +115,7 @@ public class BaseTest {
                 while (pac) {
                     packageName = driver.getCurrentPackage();
                     pac = packageName.equals("com.ifeelsmart.smartui");
-
+                    openSTB();
                     try {
                         shellCommands();
                     } catch (Exception ignore) {
@@ -116,19 +133,23 @@ public class BaseTest {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-                List<String> adb2 = Arrays.asList("");
-                Map<String, Object> ADB = ImmutableMap.of("command", "logcat -t 20000 | grep com.ifeelsmart.smartui", "args", adb2);
+                try {
+                    List<String> adb2 = Arrays.asList("");
+                    Map<String, Object> ADB = ImmutableMap.of("command", "logcat -t 20000 | grep com.ifeelsmart.smartui", "args", adb2);
 
-                String as = (String) driver.executeScript("mobile: shell", ADB);
-                Log.info(" Partner tv is not running in the front, Only package: " + packageName);
+                    String as = (String) driver.executeScript("mobile: shell", ADB);
+                    Log.info(" Partner tv is not running in the front, Only package: " + packageName);
 //                SendEmail.sendmail(as, "eyal.avramchik@partner.co.il", "IFS Just crashed !");
 //                SendEmail.sendmail(as, "shlomi.mor4@partner.co.il", "IFS Just crashed !");
-                if (as.contains("FATAL")) {
-                    Log.info("FATAL EXCEPTION");
+                    if (as.contains("FATAL")) {
+                        Log.info("FATAL EXCEPTION");
 //                    service.stop();
-                } else
-                    Log.info("No FATAL EXCEPTIONS found in the log file...");
+                    } else
+                        Log.info("No FATAL EXCEPTIONS found in the log file...");
 //                service.stop();
+                } catch (Exception ignore) {
+                    Log.info(ignore.getMessage());
+                }
             }
         });
         thread.start();
@@ -316,6 +337,7 @@ public class BaseTest {
 
         // Capture screenshot.
         File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        Log.info("Screensot is captured");
 
         // Set date format to set It as screenshot file name.
         SimpleDateFormat date = new SimpleDateFormat("dd-MMM-yyyy__hh_mm_ssaa");
@@ -328,6 +350,7 @@ public class BaseTest {
         try {
             // Copy paste file at destination folder location
             FileUtils.copyFile(scrFile, new File(destDir + "/" + destFile));
+            Log.info("Screenshot added to the folder");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -575,40 +598,44 @@ public class BaseTest {
     }
 
     public void cmd(String port) throws IOException {
-        ProcessBuilder builder = new ProcessBuilder(
-                "cmd.exe", "/c", "netstat -ano | find \"0.0.0.0:" + port + "\"");
-        builder.redirectErrorStream(true);
-        Process p = builder.start();
-        BufferedReader r = new BufferedReader(new InputStreamReader(p.getInputStream()));
-        String line;
-        while (true) {
-            line = r.readLine();
-            if (line == null) {
-                break;
-            }
-//                System.out.println(line.substring(71));
-            String AppiumServerPid = line.substring(69);
-            Log.info("Killing Appium port, Wait a sec...");
-            ProcessBuilder builder2 = new ProcessBuilder(
-                    "cmd.exe", "/c", "taskkill /pid " + AppiumServerPid + " /f");
-            builder2.redirectErrorStream(true);
-            Process p2 = builder2.start();
-            BufferedReader r2 = new BufferedReader(new InputStreamReader(p2.getInputStream()));
-            String line2;
+        try {
+            ProcessBuilder builder = new ProcessBuilder(
+                    "cmd.exe", "/c", "netstat -ano | find \"0.0.0.0:" + port + "\"");
+            builder.redirectErrorStream(true);
+            Process p = builder.start();
+            BufferedReader r = new BufferedReader(new InputStreamReader(p.getInputStream()));
+            String line;
             while (true) {
-                line2 = r2.readLine();
-                if (line2 == null) {
+                line = r.readLine();
+                if (line == null) {
                     break;
                 }
-                System.out.println(line2);
+//                System.out.println(line.substring(71));
+                String AppiumServerPid = line.substring(69);
+                Log.info("Killing Appium port, Wait a sec...");
+                ProcessBuilder builder2 = new ProcessBuilder(
+                        "cmd.exe", "/c", "taskkill /pid " + AppiumServerPid + " /f");
+                builder2.redirectErrorStream(true);
+                Process p2 = builder2.start();
+                BufferedReader r2 = new BufferedReader(new InputStreamReader(p2.getInputStream()));
+                String line2;
+                while (true) {
+                    line2 = r2.readLine();
+                    if (line2 == null) {
+                        break;
+                    }
+                    System.out.println(line2);
+                }
             }
+        } catch (Exception ignore) {
+            Log.info(ignore.getMessage());
         }
     }
 
     public void logCat(String ip) {
         try {
             String dateTime = driver.getDeviceTime().replace(":", "-");
-            ProcessBuilder builder = new ProcessBuilder("cmd.exe", "/c", "adb", "-s", ip, "logcat", ">", dateTime.substring(0, dateTime.length() - 6).replace("T", " ")+"."+ip);
+            ProcessBuilder builder = new ProcessBuilder("cmd.exe", "/c", "adb", "-s", ip, "logcat", ">", dateTime.substring(0, dateTime.length() - 6).replace("T", " ") + "." + ip);
             builder.start();
             Log.info("adb logcat is active, name of the Log:" + dateTime.substring(0, dateTime.length() - 6).replace("T", " ") + " For ip - " + ip);
 
@@ -620,7 +647,7 @@ public class BaseTest {
         }
     }
 
-    public void getRefreashRate(String ip,String deviceName) throws IOException {
+    public void getRefreashRate(String ip, String deviceName) throws IOException {
 //        List<String> adb = Arrays.asList("");
 //        Map<String, Object> ADB2 = ImmutableMap.of("command", "dumpsys display |grep DisplayModeRecord", "args", adb);
 //        String AA = (String) driver.executeScript("mobile: shell", ADB2);
@@ -635,7 +662,73 @@ public class BaseTest {
         exec.setStreamHandler(streamHandler);
         exec.execute(cmd);
         if (outputStream.toString().length() >= 69) {
-            Log.info("The Refresh Rate for " +deviceName+ " is: " + outputStream.toString().substring(66, outputStream.toString().length() - 4));
+            Log.info("The Refresh Rate for " + deviceName + " is: " + outputStream.toString().substring(66, outputStream.toString().length() - 4));
         }
     }
+
+    public void findImage() throws IOException {
+//
+//            File black = new File("C:\\Users\\OSN20933\\Pictures\\black_screen.png");
+        File start = new File("C:\\Users\\OSN20933\\Pictures\\s.png");
+        byte[] fileContent = FileUtils.readFileToByteArray(new File("C:\\Users\\OSN20933\\Pictures\\start.png"));
+        String encodedString = Base64.encodeBase64String(fileContent);
+//
+//        byte[] screenshot = Base64.encodeBase64(driver.getScreenshotAs(OutputType.BYTES));
+//        byte[] partialImage = null;
+//        OccurrenceMatchingResult result = driver
+//                .findImageOccurrence(screenshot, partialImage, new OccurrenceMatchingOptions()
+//                        .withEnabledVisualization());
+//        Assert.assertTrue(result.getVisualization().length >(0));
+//        assertNotNull(result.getRect());
+
+        boolean el = driver.findElementsByImage(encodedString).size() > 0;
+        //   takeScreenShot();
+//        WebDriverWait wait = new WebDriverWait(driver,20);
+//        wait.until(ExpectedConditions.visibilityOfElementLocated(MobileBy.ByImage.image(encodedString)));
+//        Log.info("works!!!");
+//takeScreenShot();
+        //*    if (el){
+        //  Log.info("Exist");
+        //  }
+        //    else
+        //  {
+        //    Log.info("Not exist");
+    }
+
+    public void che() throws IOException, InterruptedException {
+//       takeScreenShot();
+        byte[] pngBytes = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+
+        if (IsPngEquals(new File("C:\\Users\\OSN20933\\Pictures\\sleep_black_take.png"), pngBytes)) {
+            Log.info("Black screen catched on the screen");
+            keyCode keyCode = new keyCode(this.driver);
+            keyCode.OK();
+            takeScreenShot();
+        } else {
+
+        }
+    }
+    public static boolean IsPngEquals(File pngFile, byte[] pngBytes) throws IOException {
+        BufferedImage imageA = ImageIO.read(pngFile);
+
+        ByteArrayInputStream inStreamB = new ByteArrayInputStream(pngBytes);
+        BufferedImage imageB = ImageIO.read(inStreamB);
+        inStreamB.close();
+
+        DataBufferByte dataBufferA = (DataBufferByte)imageA.getRaster().getDataBuffer();
+        DataBufferByte dataBufferB = (DataBufferByte)imageB.getRaster().getDataBuffer();
+
+        if (dataBufferA.getNumBanks() != dataBufferB.getNumBanks()) {
+            return false;
+        }
+
+        for (int bank = 0; bank < dataBufferA.getNumBanks(); bank++) {
+            if (!Arrays.equals(dataBufferA.getData(bank), dataBufferB.getData(bank))) {
+                return false;
+            }
+        }
+
+        return true;
+    }
 }
+

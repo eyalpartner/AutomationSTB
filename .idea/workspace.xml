@@ -2,7 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ee773a6-0a46-4239-98a0-7590a264ac3c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/java.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/sikulix.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Web/voltBaseTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/utils/FactoryClasses/keyCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/utils/ScreenshotState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/utils/TemplateMatching.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2019-02-21 12-30-20.192.168.1.26" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2019-02-21 12-30-21.192.168.1.3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/AppiumServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/AppiumServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/LiveAllNight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/LiveAllNight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/zapping.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/zapping.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/utils/Log.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/utils/Log.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/LiveAllNight.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/LiveAllNight.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/zapping.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/zapping.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -14,29 +31,68 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/LiveAllNight.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="41" column="81" selection-start-line="41" selection-start-column="81" selection-end-line="41" selection-end-column="81" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/utils/AppiumServer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="73">
+              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Web/voltBaseTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="663">
+              <caret line="39" column="149" selection-start-line="39" selection-start-column="149" selection-end-line="39" selection-end-column="149" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.xml/com/sun/org/apache/xalan/internal/xsltc/compiler/util/Type.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="49" column="29" selection-start-line="49" selection-start-column="29" selection-end-line="49" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="131" column="21" selection-start-line="131" selection-start-column="21" selection-end-line="131" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/zapping.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/utils/BaseTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
+            <state relative-caret-position="-311">
+              <caret line="444" column="16" selection-start-line="444" selection-start-column="16" selection-end-line="444" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/utils/BaseTestNetflix.java">
+        <entry file="file://$PROJECT_DIR$/testng.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="73" column="1" selection-start-line="73" selection-start-column="1" selection-end-line="73" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/utils/Log.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="782">
-              <caret line="46" column="24" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="24" />
+            <state relative-caret-position="17">
+              <caret line="22" column="54" selection-start-line="22" selection-start-column="54" selection-end-line="22" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -50,6 +106,13 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>sig</find>
+      <find>crash</find>
+      <find>fatal</find>
+    </findStrings>
+  </component>
   <component name="Git.Rebase.Settings">
     <option name="ONTO" value="refs/heads/master" />
   </component>
@@ -60,14 +123,21 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/utils/BaseTest.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/utils/AppiumServer.java" />
         <option value="$PROJECT_DIR$/src/main/java/utils/SendEmail.java" />
         <option value="$PROJECT_DIR$/src/test/java/netflixPlay.java" />
         <option value="$PROJECT_DIR$/src/main/java/utils/Log.java" />
         <option value="$PROJECT_DIR$/src/main/java/utils/BaseTestNetflix.java" />
+        <option value="$PROJECT_DIR$/src/main/java/utils/performanceTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/utils/AppiumServer.java" />
         <option value="$PROJECT_DIR$/src/test/java/zapping.java" />
+        <option value="$PROJECT_DIR$/src/main/java/utils/ScreenshotState.java" />
+        <option value="$PROJECT_DIR$/src/main/java/utils/FactoryClasses/keyCode.java" />
+        <option value="$PROJECT_DIR$/src/main/java/utils/TemplateMatching.java" />
+        <option value="$PROJECT_DIR$/src/main/java/utils/BaseTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/LiveAllNight.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/Web/voltBaseTest.java" />
+        <option value="$PROJECT_DIR$/testng.xml" />
       </list>
     </option>
   </component>
@@ -92,8 +162,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -119,31 +187,27 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="STB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="STB" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="STB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="STB" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="android.sdk.path" value="C:/sdk" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550754016596" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552400622731" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/sikulixapi.jar!/" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.runner" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\OSN20933\IdeaProjects\STB\src\main\resources" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="utils" />
     </key>
@@ -166,7 +230,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="TestNG.C:/Users/OSN20933/IdeaProjects/STB/testng.xml">
     <configuration name="C:/Users/OSN20933/IdeaProjects/STB/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="STB" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/testng.xml" />
@@ -177,9 +241,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="voltBaseTest.logIn" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="STB" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Web.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Web" />
+      <option name="MAIN_CLASS_NAME" value="Web.voltBaseTest" />
+      <option name="METHOD_NAME" value="logIn" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.C:/Users/OSN20933/IdeaProjects/STB/testng.xml" />
+        <item itemvalue="TestNG.voltBaseTest.logIn" />
       </list>
     </recent_temporary>
   </component>
@@ -229,19 +312,52 @@
       <option name="project" value="LOCAL" />
       <updated>1550757116682</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="- Add the code clean, short&#10;- Add support for multiple STB'S that will run togather&#10;- Add clear logs&#10;- Logcat is starting automatically&#10;- Option to start every device with diffrent tests&#10;- add optimization for the code - quicker&#10;- add the option to have screenshot from STB in every place&#10;- add the option to run the code from jenkins&#10;- easy access to logcat for each device (unique name)">
+      <created>1550757643497</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1550757643497</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="C__Users_OSN20933_IdeaProjects_STB_testng_xml - 2019.02.21 at 12h 32m 22s.xml">
+    <history-entry file="voltBaseTest_logIn - 2019.03.11 at 14h 11m 12s.xml">
+      <configuration name="voltBaseTest.logIn" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="voltBaseTest_logIn - 2019.03.11 at 14h 15m 38s.xml">
+      <configuration name="voltBaseTest.logIn" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="voltBaseTest_logIn - 2019.03.11 at 14h 17m 04s.xml">
+      <configuration name="voltBaseTest.logIn" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="voltBaseTest_logIn - 2019.03.11 at 14h 18m 49s.xml">
+      <configuration name="voltBaseTest.logIn" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="voltBaseTest_logIn - 2019.03.11 at 14h 28m 08s.xml">
+      <configuration name="voltBaseTest.logIn" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="voltBaseTest_logIn - 2019.03.11 at 14h 28m 54s.xml">
+      <configuration name="voltBaseTest.logIn" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="voltBaseTest_logIn - 2019.03.11 at 14h 29m 57s.xml">
+      <configuration name="voltBaseTest.logIn" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="voltBaseTest_logIn - 2019.03.11 at 14h 31m 55s.xml">
+      <configuration name="voltBaseTest.logIn" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="voltBaseTest_logIn - 2019.03.11 at 16h 52m 21s.xml">
+      <configuration name="voltBaseTest.logIn" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="C__Users_OSN20933_IdeaProjects_STB_testng_xml - 2019.03.12 at 10h 00m 03s.xml">
       <configuration name="C:/Users/OSN20933/IdeaProjects/STB/testng.xml" configurationId="TestNG" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25340393" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2700454" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -250,15 +366,15 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3289689" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49848714" visible="true" weight="0.44353518" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39934534" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Event Log" order="8" sideWeight="0.5015129" side_tool="true" visible="true" weight="0.44353518" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info active="true" anchor="bottom" id="Messages" order="10" visible="true" weight="0.3289689" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.3289689" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -274,140 +390,197 @@
     <option name="LAST_COMMIT_MESSAGE" value="- Add the code clean, short&#10;- Add support for multiple STB'S that will run togather&#10;- Add clear logs&#10;- Logcat is starting automatically&#10;- Option to start every device with diffrent tests&#10;- add optimization for the code - quicker&#10;- add the option to have screenshot from STB in every place&#10;- add the option to run the code from jenkins&#10;- easy access to logcat for each device (unique name)" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/screenshots/06-Mar-2019__09_58_34AM.png" />
+    <entry file="file://$PROJECT_DIR$/screenshots/06-Mar-2019__09_59_01AM.png" />
+    <entry file="file://$PROJECT_DIR$/screenshots/06-Mar-2019__08_29_41AM.png" />
+    <entry file="file://$PROJECT_DIR$/screenshots/06-Mar-2019__08_29_50AM.png" />
+    <entry file="file://$PROJECT_DIR$/screenshots/06-Mar-2019__09_55_31AM.png" />
+    <entry file="file://$PROJECT_DIR$/screenshots/06-Mar-2019__09_55_17AM.png" />
+    <entry file="file://$PROJECT_DIR$/screenshots/06-Mar-2019__09_54_50AM.png" />
+    <entry file="file://$PROJECT_DIR$/screenshots/06-Mar-2019__09_57_42AM.png" />
+    <entry file="file://$PROJECT_DIR$/screenshots/06-Mar-2019__09_58_21AM.png" />
+    <entry file="file://$PROJECT_DIR$/screenshots/06-Mar-2019__10_01_50AM.png" />
+    <entry file="file://$PROJECT_DIR$/screenshots/06-Mar-2019__10_02_02AM.png" />
+    <entry file="file://$PROJECT_DIR$/screenshots/06-Mar-2019__10_01_25AM.png" />
+    <entry file="file://$PROJECT_DIR$/screenshots/06-Mar-2019__10_01_12AM.png" />
+    <entry file="file://$PROJECT_DIR$/screenshots/06-Mar-2019__10_00_59AM.png" />
+    <entry file="file://$PROJECT_DIR$/screenshots/06-Mar-2019__10_00_40AM.png" />
+    <entry file="file://$PROJECT_DIR$/screenshots/06-Mar-2019__09_57_54AM.png" />
+    <entry file="file://$PROJECT_DIR$/screenshots/06-Mar-2019__09_58_07AM.png" />
+    <entry file="file://$PROJECT_DIR$/screenshots/06-Mar-2019__09_58_47AM.png" />
+    <entry file="file://$PROJECT_DIR$/screenshots/06-Mar-2019__10_00_15AM.png" />
+    <entry file="file://$PROJECT_DIR$/screenshots/06-Mar-2019__10_00_27AM.png" />
+    <entry file="file://$PROJECT_DIR$/screenshots/06-Mar-2019__01_16_33PM.png" />
+    <entry file="file://$PROJECT_DIR$/screenshots/06-Mar-2019__01_16_45PM.png" />
+    <entry file="file://$PROJECT_DIR$/screenshots/06-Mar-2019__01_16_58PM.png" />
+    <entry file="file://$PROJECT_DIR$/screenshots/06-Mar-2019__01_28_39PM.png" />
+    <entry file="file://$PROJECT_DIR$/screenshots/06-Mar-2019__01_31_08PM.png" />
+    <entry file="file://$PROJECT_DIR$/screenshots/06-Mar-2019__01_31_20PM.png" />
+    <entry file="file://$PROJECT_DIR$/screenshots/06-Mar-2019__01_31_53PM.png" />
+    <entry file="file://$PROJECT_DIR$/screenshots/06-Mar-2019__01_31_31PM.png" />
+    <entry file="file://$PROJECT_DIR$/screenshots/06-Mar-2019__01_33_52PM.png" />
+    <entry file="file://$PROJECT_DIR$/screenshots/06-Mar-2019__01_31_42PM.png" />
+    <entry file="file://$PROJECT_DIR$/screenshots/06-Mar-2019__01_30_58PM.png" />
+    <entry file="file://$PROJECT_DIR$/screenshots/06-Mar-2019__01_28_51PM.png" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/utils/TemplateMatching.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/utils/AppiumServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="14" selection-start-column="14" selection-end-column="14" />
+        <state relative-caret-position="-201">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/utils/SendEmail.java">
+    <entry file="file://$PROJECT_DIR$/screenshots/06-Mar-2019__04_12_10PM.png" />
+    <entry file="file://$PROJECT_DIR$/screenshots/06-Mar-2019__06_52_44PM.png" />
+    <entry file="file://$PROJECT_DIR$/screenshots/06-Mar-2019__06_52_59PM.png" />
+    <entry file="file://$PROJECT_DIR$/screenshots/06-Mar-2019__06_53_28PM.png" />
+    <entry file="file://$PROJECT_DIR$/screenshots/06-Mar-2019__06_52_15PM.png" />
+    <entry file="file://$PROJECT_DIR$/screenshots/06-Mar-2019__06_53_43PM.png" />
+    <entry file="file://$PROJECT_DIR$/screenshots/06-Mar-2019__04_11_59PM.png" />
+    <entry file="file://$PROJECT_DIR$/screenshots/07-Mar-2019__12_50_58AM.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/screenshots/07-Mar-2019__04_52_48AM.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/screenshots/07-Mar-2019__04_21_13PM.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/screenshots/07-Mar-2019__04_20_20PM.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/utils/AppiumServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1615">
-          <caret line="107" column="1" selection-start-line="107" selection-start-column="1" selection-end-line="107" selection-end-column="1" />
+        <state relative-caret-position="73">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/utils/BaseTest.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="381" column="26" lean-forward="true" selection-start-line="381" selection-start-column="26" selection-end-line="381" selection-end-column="26" />
+        <state relative-caret-position="308">
+          <caret line="131" column="21" selection-start-line="131" selection-start-column="21" selection-end-line="131" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.xml/com/sun/org/apache/xalan/internal/xsltc/compiler/util/Type.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="49" column="29" selection-start-line="49" selection-start-column="29" selection-end-line="49" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Web/voltBaseTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="39" column="149" selection-start-line="39" selection-start-column="149" selection-end-line="39" selection-end-column="149" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4051#5877#0" expanded="true" />
-            <element signature="e#5876#5877#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/LiveAllNight.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/training.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/catchUp.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/vod.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/switchApps.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/netflixPlay.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="9" column="41" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
+        <state relative-caret-position="391">
+          <caret line="41" column="81" selection-start-line="41" selection-start-column="81" selection-end-line="41" selection-end-column="81" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/testng.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-204" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j2.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/exoplayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#9604#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="17">
+          <caret line="22" column="54" selection-start-line="22" selection-start-column="54" selection-end-line="22" selection-end-column="54" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/startover.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/amazon.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2019-02-21 12-30-20.192.168.1.26">
+    <entry file="file://$PROJECT_DIR$/src/main/java/utils/BaseTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184348">
-          <caret line="10844" column="72" selection-start-line="10844" selection-start-column="72" selection-end-line="10844" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/volt/logIn.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-97" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/volt/BaseFactoryVolt.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="e#547#548#0" expanded="true" />
-            <element signature="e#589#590#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/utils/BaseTestNetflix.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="73" column="1" selection-start-line="73" selection-start-column="1" selection-end-line="73" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2019-02-21 12-30-21.192.168.1.3">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/utils/Log.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="46" column="24" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/zapping.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
+        <state relative-caret-position="-311">
+          <caret line="444" column="16" selection-start-line="444" selection-start-column="16" selection-end-line="444" selection-end-column="16" />
         </state>
       </provider>
     </entry>
   </component>
   <component name="masterDetails">
     <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>test</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>10</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>STB</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
       <state key="ProjectJDKs.UI">
         <settings>
           <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: cglib:cglib:3.2.8</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

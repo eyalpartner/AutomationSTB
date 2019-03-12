@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="sikulix">
+    <CLASSES>
+      <root url="file://$USER_HOME$/Desktop/sikulix" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$USER_HOME$/Desktop/sikulix" />
+    </SOURCES>
+    <jarDirectory url="file://$USER_HOME$/Desktop/sikulix" recursive="false" />
+    <jarDirectory url="file://$USER_HOME$/Desktop/sikulix" recursive="false" type="SOURCES" />
+  </library>
+</component>

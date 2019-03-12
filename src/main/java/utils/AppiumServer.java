@@ -16,7 +16,7 @@ public class AppiumServer{
     public  AppiumDriverLocalService service;
     public DesiredCapabilities cap;
     public String Appium_Node_Path = "C:\\Program Files\\nodejs\\node.exe";
-    public String Appium_JS_Path = "C:\\node_modules\\appium\\build\\lib\\main.js";
+    public String Appium_JS_Path = "C:\\Users\\OSN20933\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js";
     public void AppiumServer(String port,String bpPort,String Name) throws InterruptedException {
         service = AppiumDriverLocalService.buildService(new AppiumServiceBuilder()
                 .usingPort(Integer.parseInt(port)).usingDriverExecutable(new File(Appium_Node_Path))
@@ -31,6 +31,6 @@ public class AppiumServer{
 //        }
 //        else
         service.start();
-        Log.info(" ----------------------  Appium server has started at " + service.getUrl().toString() +"("+Name+")" + "  ------------------------");
+        Log.info(" ---------------------- Appium server has started at " + service.getUrl().toString() +"("+Name+")" + "  ------------------------");
     }
 }
