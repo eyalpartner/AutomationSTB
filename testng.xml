@@ -19,12 +19,12 @@
 
 <test name="2">
 <parameter name="test-name" value="גירסת פרטנר טי וי 2.33.3 על גירסת ממיר 81" />
-    <parameter name="deviceName" value="192.168.1.3:5555" />
-    <parameter name="udid" value="192.168.1.3:5555" />
+    <parameter name="deviceName" value="192.168.1.6" />
+    <parameter name="udid" value="192.168.1.6:5555" />
     <parameter name="platformVersion" value="ANDROID" />
     <parameter name="AppiumServer" value="Eyal\\node_eyal.bat"/>
     <parameter name="AdbLog" value="Eyal\\adb_eyal.bat"/>
-    <parameter name="ip" value="192.168.1.3"/>
+    <parameter name="ip" value="192.168.1.6"/>
     <parameter name="port" value="4728"/>
     <parameter name="bpPort" value="8000"/>
     <parameter name="appPackage" value="com.ifeelsmart.common.IFSNativeActivity"/>
@@ -34,7 +34,7 @@
     <!--<parameter name="appActivity" value="com.netflix.ninja.MainActivity"/>-->
     <!--<parameter name="appPackage" value="com.netflix.ninja"/>-->
     <classes>
-    <class name="LiveAllNight" />
+    <class name="Play_Pause_Live" />
 </classes>
 </test>
 

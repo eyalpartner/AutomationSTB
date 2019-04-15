@@ -47,7 +47,7 @@ public class BaseTestNetflix {
         server.AppiumServer(port, bpPort, Name);
         Log.info(" --- נטפליקס נפתחת בממיר של  --- " + deviceName);
         driver = new AndroidDriver<>(new URL("http://0.0.0.0:" + port + "/wd/hub"), cap);
-        baseTest.logCat(ip);
+//        baseTest.logCat(ip);
         driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
     }
 

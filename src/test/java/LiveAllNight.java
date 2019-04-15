@@ -41,6 +41,7 @@ public class LiveAllNight extends BaseTest {
             activity = driver.currentActivity();
             act = activity.equals("com.ifeelsmart.common.IFSNativeActivityImpl");
         }
+        logCatLinux(deviceName);
         Log.info(" ifs just crashed man!!! shit man !!! :-( ");
         Assert.assertTrue(act);
     }
