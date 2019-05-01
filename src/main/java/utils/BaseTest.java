@@ -81,10 +81,10 @@ public class BaseTest {
 //    }
 
 
-    @Parameters({"Name", "appPackage", "appActivity", "port", "deviceName", "platformVersion", "AdbLog", "udid", "bpPort", "ip"})
+    @Parameters({"Name", "appPackage", "appActivity", "port", "deviceName", "platformVersion", "udid", "bpPort", "ip"})
     //Parameters that reads from testng.xml
     @BeforeClass
-    public void Capabilities(String Name, String appActivity, String appPackage, String port, String deviceName, String platformVersion, String AdbLog, String udid, String bpPort, String ip) throws Exception {
+    public void Capabilities(String Name, String appActivity, String appPackage, String port, String deviceName, String platformVersion, String udid, String bpPort, String ip) throws Exception {
         cap.setCapability("deviceName", deviceName);
         cap.setCapability("Name", Name);
         cap.setCapability("udid", udid);
@@ -119,10 +119,12 @@ public class BaseTest {
                 while (pac) {
                     packageName = driver.getCurrentPackage();
                     pac = packageName.equals("com.ifeelsmart.smartui");
-//                    openSTB();
+                    openSTB();
                     try {
                         monitorErrors(deviceName, ip);
-//                        pingSent();
+                        memoryTest(ip,deviceName);
+//                        pa(ip);
+                        pingSent(ip);
                     } catch (Exception ignore) {
                         Log.info(ignore.getMessage());
                     }
@@ -164,7 +166,7 @@ public class BaseTest {
                 }
             }
         });
-//        thread.start();
+        thread.start();
 
 //        String x = driver.getCapabilities().getCapability("deviceName").toString();
 //        String y = (driver.getSessionDetails()).toString();
@@ -283,56 +285,56 @@ public class BaseTest {
             Map<String, Object> ADB = ImmutableMap.of("command", "logcat -d", "args", adb);
             String AA = (String) this.driver.executeScript("mobile: shell", ADB);
 
-//            if (AA.contains("teardown/3002")) {
-//                takeScreenShot();
-//                Map<String, Object> AD = ImmutableMap.of("command", "logcat -d |grep 'teardown/3002'", "args", adb1);
-//                String teardown = (String) this.driver.executeScript("mobile: shell", AD);
-//                Log.info("********** Decoding error from ********** " + deviceName + "'s STB:  " + teardown);
-//                logCatLinux(ip);
-//                Map<String, Object> clearLogcat = ImmutableMap.of("command", "logcat -c", "args", adb2);
-//                this.driver.executeScript("mobile: shell", clearLogcat);
-//                SendEmail.sendmail(teardown, Eyal, "Decoding Error is catched right now");
-//            } if (AA.contains("error_code:#PBA")) {
-//                takeScreenShot();
-//                Map<String, Object> PBA = ImmutableMap.of("command", "logcat -d |grep 'error_code:#PBA'", "args", adb3);
-//                String pbaerror = (String) this.driver.executeScript("mobile: shell", PBA);
-//                Log.info("********** PBA Error ********** " + pbaerror);
-//                logCatLinux(ip);
-////                SendEmail.sendmail(pbaerror, "eyal.avramchik@partner.co.il", "PBA Error");
-//            } else if (AA.contains("IFS_RESULT_HOST")) {
-//                //press ok button to see the mini epg info
-//                takeScreenShot();
-//                Map<String, Object> DECODING = ImmutableMap.of("command", "logcat -d|grep 'IFS_RESULT_HOST'", "args", adb4);
-//                String blackscreen = (String) this.driver.executeScript("mobile: shell", DECODING);
-//                Log.info("********** SC error ********** " + blackscreen);
-//                logCatLinux(ip);
-////                SendEmail.sendmail(blackscreen, "eyal.avramchik@partner.co.il", "SC Error");
-//            } else if (AA.contains("fatal")) {
-//                takeScreenShot();
-//                Map<String, Object> COACH = ImmutableMap.of("command", "logcat -d|grep 'fatal'", "args", adb5);
-//                String fatal = (String) this.driver.executeScript("mobile: shell", COACH);
-//                Log.info("********** fatal catched ********** " + fatal);
-//                logCatLinux(ip);
-//            }
+            if (AA.contains("teardown/3002")) {
+                takeScreenShot();
+                Map<String, Object> AD = ImmutableMap.of("command", "logcat -d |grep 'teardown/3002'", "args", adb1);
+                String teardown = (String) this.driver.executeScript("mobile: shell", AD);
+                Log.info("********** Decoding error from ********** " + deviceName + "'s STB:  " + teardown);
+                logCatLinux(ip);
+                Map<String, Object> clearLogcat = ImmutableMap.of("command", "logcat -c", "args", adb2);
+                this.driver.executeScript("mobile: shell", clearLogcat);
+                SendEmail.sendmail(teardown, Eyal, "Decoding Error is catched right now");
+            } if (AA.contains("error_code:#PBA")) {
+                takeScreenShot();
+                Map<String, Object> PBA = ImmutableMap.of("command", "logcat -d |grep 'error_code:#PBA'", "args", adb3);
+                String pbaerror = (String) this.driver.executeScript("mobile: shell", PBA);
+                Log.info("********** PBA Error ********** " + pbaerror);
+                logCatLinux(ip);
+//                SendEmail.sendmail(pbaerror, "eyal.avramchik@partner.co.il", "PBA Error");
+            } else if (AA.contains("IFS_RESULT_HOST")) {
+                //press ok button to see the mini epg info
+                takeScreenShot();
+                Map<String, Object> DECODING = ImmutableMap.of("command", "logcat -d|grep 'IFS_RESULT_HOST'", "args", adb4);
+                String blackscreen = (String) this.driver.executeScript("mobile: shell", DECODING);
+                Log.info("********** SC error ********** " + blackscreen);
+                logCatLinux(ip);
+//                SendEmail.sendmail(blackscreen, "eyal.avramchik@partner.co.il", "SC Error");
+            } else if (AA.contains("fatal")) {
+                takeScreenShot();
+                Map<String, Object> COACH = ImmutableMap.of("command", "logcat -d|grep 'fatal'", "args", adb5);
+                String fatal = (String) this.driver.executeScript("mobile: shell", COACH);
+                Log.info("********** fatal catched ********** " + fatal);
+                logCatLinux(ip);
+            }
 //            else if (AA.contains("error")){
 //                Map<String, Object> ERROR = ImmutableMap.of("command", "logcat -d|grep 'error'", "args", adb6);
 //                String error = (String) this.driver.executeScript("mobile: shell", ERROR);
 //                Log.info("Error catched " + error);
 //                logCatLinux(ip);
 //            }
-            if (AA.contains("Player is paused")) {
-//                Map<String, Object> gg = ImmutableMap.of("command", "logcat -d |grep 'Player is paused'", "args", adb8);
-//                String pause = (String) this.driver.executeScript("mobile: shell", gg);
-                Log.info("********** Player is paused ********** " + deviceName + "'s STB:  ");
-            } else if (AA.contains("Player is resumed")) {
-//                Map<String, Object> bb = ImmutableMap.of("command", "logcat -d |grep 'Player is resumed'", "args", adb9);
-//                String pause1 = (String) this.driver.executeScript("mobile: shell", bb);
-                Log.info("********** Player is Resumed ********** " + deviceName + "'s STB:  ");
-            } else if (AA.contains("exoPlayer is buffering")) {
-//                Map<String, Object> cc = ImmutableMap.of("command", "logcat -d |grep 'Player is buffering'", "args", adb10);
-//                String pause2 = (String) this.driver.executeScript("mobile: shell", cc);
-                Log.info("********** Player is Live ********** " + deviceName + "'s STB:  ");
-            }
+//            if (AA.contains("Player is paused")) {
+////                Map<String, Object> gg = ImmutableMap.of("command", "logcat -d |grep 'Player is paused'", "args", adb8);
+////                String pause = (String) this.driver.executeScript("mobile: shell", gg);
+//                Log.info("********** Player is paused ********** " + deviceName + "'s STB:  ");
+//            } else if (AA.contains("Player is resumed")) {
+////                Map<String, Object> bb = ImmutableMap.of("command", "logcat -d |grep 'Player is resumed'", "args", adb9);
+////                String pause1 = (String) this.driver.executeScript("mobile: shell", bb);
+//                Log.info("********** Player is Resumed ********** " + deviceName + "'s STB:  ");
+//            } else if (AA.contains("exoPlayer is buffering")) {
+////                Map<String, Object> cc = ImmutableMap.of("command", "logcat -d |grep 'Player is buffering'", "args", adb10);
+////                String pause2 = (String) this.driver.executeScript("mobile: shell", cc);
+//                Log.info("********** Player is Live ********** " + deviceName + "'s STB:  ");
+//            }
             Map<String, Object> clearLogcat = ImmutableMap.of("command", "logcat -c", "args", adb7);
             this.driver.executeScript("mobile: shell", clearLogcat);
         } catch (Exception ignore) {
@@ -340,7 +342,7 @@ public class BaseTest {
         return deviceName;
     }
 
-    public void pingSent() {
+    public void pingSent(String ip) {
 
         List<String> ping = Arrays.asList("");
         List<String> gate = Arrays.asList("");
@@ -349,7 +351,7 @@ public class BaseTest {
         Map<String, Object> GATE = ImmutableMap.of("command", "ping -c1 80.179.52.100 | grep packets", "args", gate);
         String def = (String) this.driver.executeScript("mobile: shell", GATE);
         if (result.contains("0 received")) {
-            Log.info("Ping Fails !!!!!!!!!!!!!!!!!!!!!!!!!!!!!Ping Fails!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Ping Fails!!!!!!!!!!!!!!!!!!!!!!!!!!Ping Fails " + result);
+            Log.info("Ping Fails !!!!!!!!!!!!!!!!!!!!!!!!!!!!!Ping Fails!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Ping Fails!!!!!!!!!!!!!!!!!!!!!!!!!!Ping Fails " + result + ip);
             takeScreenShot();
             SendEmail.sendmail(result, "eyal.avramchik@partner.co.il", "Ping fails in Eyal automation !!");
         } else if (def.contains("0 received")) {
@@ -831,24 +833,29 @@ public class BaseTest {
 
             // run the Unix "ps -ef" command
             // using the Runtime exec method:
-            Process p = Runtime.getRuntime().exec("adb -s "+ip+" logcat | grep 'Player is buffering'");
+            Process c = Runtime.getRuntime().exec("adb -s " + ip + " logcat -c");
+
+            Process p = Runtime.getRuntime().exec("adb -s " + ip + " logcat | grep 'Player is buffering'");
 
             BufferedReader stdInput = new BufferedReader(new
                     InputStreamReader(p.getInputStream()));
 
             BufferedReader stdError = new BufferedReader(new
                     InputStreamReader(p.getErrorStream()));
-
             // read the output from the command
-            System.out.println("Here is the standard output of the command:\n");
             while ((s = stdInput.readLine()) != null) {
-                if (s.contains("Player is buffering")) {
-                    Log.info(s);
-                }
-                else if (s.contains("Player is paused")){
-                    Log.info(s);
-                }
 
+                if (s.contains("Player is buffering")) {
+                    Log.info(" **********  YOU ARE IN A LIVE CHANNEL  **********");
+                } else if (s.contains("Player is paused")) {
+                    Log.info(" **********  YOU ARE IN A PAUSE MODE  **********");
+                } else if (s.contains("Player is resumed")) {
+                    Log.info(" **********  YOU ARE IN RESUME MODE/PLAY MODE  **********");
+                } else if (s.contains("keycode=89")) {
+                    Log.info(" **********  REWIND  **********");
+                } else if (s.contains("keycode=90")) {
+                    Log.info(" **********  FAST FORWARD  **********");
+                }
             }
 
             // read any errors from the attempted command
@@ -858,12 +865,59 @@ public class BaseTest {
 //            }
 
 //            System.exit(0);
-        }
-        catch (IOException e) {
+        } catch (IOException e) {
             System.out.println("exception happened - here's what I know: ");
             e.printStackTrace();
             System.exit(-1);
         }
     }
+
+    public void memoryTest(String ip,String deviceName) throws IOException {
+        String n = null;
+
+        try {
+
+            // run the Unix "ps -ef" command
+            // using the Runtime exec method:
+            Process c = Runtime.getRuntime().exec("adb -s " + ip + " logcat -c");
+
+            Process p = Runtime.getRuntime().exec("adb -s " + ip + " shell top -n 1 | grep 'lge.tr069c.partner'");
+
+            BufferedReader stdInput = new BufferedReader(new
+                    InputStreamReader(p.getInputStream()));
+
+            BufferedReader stdError = new BufferedReader(new
+                    InputStreamReader(p.getErrorStream()));
+            // read the output from the command
+            while ((n = stdInput.readLine()) != null) {
+
+
+                String[] splited = n.split("\\s+");
+               if (!splited[5].contains("0%")) {
+
+                    Log.info(splited[5] + " "+ ip + " " + deviceName);
+                }
+            }
+//                } else if (n.contains("Player is paused")) {
+//                    Log.info(" **********  YOU ARE IN A PAUSE MODE  **********");
+//
+//                }
+
+
+            // read any errors from the attempted command
+//            System.out.println("Here is the standard error of the command (if any):\n");
+//            while ((s = stdError.readLine()) != null) {
+//                System.out.println(s);
+//            }
+
+//            System.exit(0);
+        } catch (IOException e) {
+            System.out.println("exception happened - here's what I know: ");
+            e.printStackTrace();
+            System.exit(-1);
+        }
+    }
+
+
 }
 //        if (i == 0) System.out.println("Nothing read from input stream");
