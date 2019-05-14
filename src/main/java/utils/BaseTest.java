@@ -3,6 +3,8 @@ import ch.ethz.ssh2.StreamGobbler;
 import com.google.common.collect.ImmutableMap;
 import com.sun.mail.imap.protocol.Item;
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.android.nativekey.AndroidKey;
+import io.appium.java_client.android.nativekey.KeyEvent;
 import org.apache.commons.codec.binary.Base64;
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
@@ -119,12 +121,12 @@ public class BaseTest {
                 while (pac) {
                     packageName = driver.getCurrentPackage();
                     pac = packageName.equals("com.ifeelsmart.smartui");
-                    openSTB();
+//                    openSTB();
                     try {
-                        monitorErrors(deviceName, ip);
-                        memoryTest(ip,deviceName);
-//                        pa(ip);
-                        pingSent(ip);
+                    DRM(ip);
+//                        memoryTest(ip,deviceName);
+//                   logCatLinux(ip);
+//                        pingSent(ip);
                     } catch (Exception ignore) {
                         Log.info(ignore.getMessage());
                     }
@@ -282,46 +284,64 @@ public class BaseTest {
         List<String> adb9 = Arrays.asList("");
         List<String> adb10 = Arrays.asList("");
         try {
-            Map<String, Object> ADB = ImmutableMap.of("command", "logcat -d", "args", adb);
+            Map<String, Object> ADB = ImmutableMap.of("command", "logcat -d |grep 'DRM'", "args", adb);
             String AA = (String) this.driver.executeScript("mobile: shell", ADB);
-
-            if (AA.contains("teardown/3002")) {
-                takeScreenShot();
-                Map<String, Object> AD = ImmutableMap.of("command", "logcat -d |grep 'teardown/3002'", "args", adb1);
-                String teardown = (String) this.driver.executeScript("mobile: shell", AD);
-                Log.info("********** Decoding error from ********** " + deviceName + "'s STB:  " + teardown);
-                logCatLinux(ip);
-                Map<String, Object> clearLogcat = ImmutableMap.of("command", "logcat -c", "args", adb2);
-                this.driver.executeScript("mobile: shell", clearLogcat);
-                SendEmail.sendmail(teardown, Eyal, "Decoding Error is catched right now");
-            } if (AA.contains("error_code:#PBA")) {
-                takeScreenShot();
-                Map<String, Object> PBA = ImmutableMap.of("command", "logcat -d |grep 'error_code:#PBA'", "args", adb3);
-                String pbaerror = (String) this.driver.executeScript("mobile: shell", PBA);
-                Log.info("********** PBA Error ********** " + pbaerror);
-                logCatLinux(ip);
-//                SendEmail.sendmail(pbaerror, "eyal.avramchik@partner.co.il", "PBA Error");
-            } else if (AA.contains("IFS_RESULT_HOST")) {
-                //press ok button to see the mini epg info
-                takeScreenShot();
-                Map<String, Object> DECODING = ImmutableMap.of("command", "logcat -d|grep 'IFS_RESULT_HOST'", "args", adb4);
-                String blackscreen = (String) this.driver.executeScript("mobile: shell", DECODING);
-                Log.info("********** SC error ********** " + blackscreen);
-                logCatLinux(ip);
-//                SendEmail.sendmail(blackscreen, "eyal.avramchik@partner.co.il", "SC Error");
-            } else if (AA.contains("fatal")) {
-                takeScreenShot();
-                Map<String, Object> COACH = ImmutableMap.of("command", "logcat -d|grep 'fatal'", "args", adb5);
-                String fatal = (String) this.driver.executeScript("mobile: shell", COACH);
-                Log.info("********** fatal catched ********** " + fatal);
-                logCatLinux(ip);
-            }
-//            else if (AA.contains("error")){
-//                Map<String, Object> ERROR = ImmutableMap.of("command", "logcat -d|grep 'error'", "args", adb6);
-//                String error = (String) this.driver.executeScript("mobile: shell", ERROR);
-//                Log.info("Error catched " + error);
+            driver.pressKey(new KeyEvent(AndroidKey.CHANNEL_UP));
+            Log.info("--- Zapping up ---");
+            Thread.sleep(4000);
+//            if (AA.contains("teardown/3002")) {
+//                takeScreenShot();
+//                Map<String, Object> AD = ImmutableMap.of("command", "logcat -d |grep 'teardown/3002'", "args", adb1);
+//                String teardown = (String) this.driver.executeScript("mobile: shell", AD);
+//                Log.info("********** Decoding error from ********** " + deviceName + "'s STB:  " + teardown);
 //                logCatLinux(ip);
+//                SendEmail.sendmail(teardown, Eyal, "Decoding Error is catched right now");
+//                Thread.sleep(60000);
+//                Log.info("Wait 60 seconds before retry mannually");
+//            } if (AA.contains("error_code:#PBA")) {
+//                takeScreenShot();
+//                Map<String, Object> PBA = ImmutableMap.of("command", "logcat -d |grep 'error_code:#PBA'", "args", adb3);
+//                String pbaerror = (String) this.driver.executeScript("mobile: shell", PBA);
+//                Log.info("********** PBA Error ********** " + pbaerror);
+//                logCatLinux(ip);
+////                SendEmail.sendmail(pbaerror, "eyal.avramchik@partner.co.il", "PBA Error");
+//                Thread.sleep(60000);
+//                Log.info("Wait 60 seconds before retry mannually");
+//
+//            } else if (AA.contains("IFS_RESULT_HOST")) {
+//                //press ok button to see the mini epg info
+//                takeScreenShot();
+//                Map<String, Object> DECODING = ImmutableMap.of("command", "logcat -d|grep 'IFS_RESULT_HOST'", "args", adb4);
+//                String blackscreen = (String) this.driver.executeScript("mobile: shell", DECODING);
+//                Log.info("********** SC error ********** " + blackscreen);
+//                logCatLinux(ip);
+//                Thread.sleep(60000);
+//                Log.info("Wait 60 seconds before retry mannually");
+////                SendEmail.sendmail(blackscreen, "eyal.avramchik@partner.co.il", "SC Error");
+//            } else if (AA.contains("fatal")) {
+//                takeScreenShot();
+//                Map<String, Object> COACH = ImmutableMap.of("command", "logcat -d|grep 'fatal'", "args", adb5);
+//                String fatal = (String) this.driver.executeScript("mobile: shell", COACH);
+//                Log.info("********** fatal catched ********** " + fatal);
+//                logCatLinux(ip);
+//                Thread.sleep(60000);
+//                Log.info("Wait 60 seconds before retry mannually");
+//                Map<String, Object> clearLogcat2 = ImmutableMap.of("command", "logcat -c", "args", adb10);
+//                this.driver.executeScript("mobile: shell", clearLogcat2);
 //            }
+            if (AA != null) {
+                Log.info(AA);
+                takeScreenShot();
+                Log.info("First screenshot");
+                Log.info("DRM Error catched");
+                logCatLinux(ip);
+                Thread.sleep(60000);
+                Log.info("Wait 60 seconds before retry mannually");
+                takeScreenShot();
+                Log.info("Second screenshot after 60 seconds");
+                Map<String, Object> clearLogcat2 = ImmutableMap.of("command", "logcat -c", "args", adb10);
+                this.driver.executeScript("mobile: shell", clearLogcat2);
+            }
 //            if (AA.contains("Player is paused")) {
 ////                Map<String, Object> gg = ImmutableMap.of("command", "logcat -d |grep 'Player is paused'", "args", adb8);
 ////                String pause = (String) this.driver.executeScript("mobile: shell", gg);
@@ -335,8 +355,6 @@ public class BaseTest {
 ////                String pause2 = (String) this.driver.executeScript("mobile: shell", cc);
 //                Log.info("********** Player is Live ********** " + deviceName + "'s STB:  ");
 //            }
-            Map<String, Object> clearLogcat = ImmutableMap.of("command", "logcat -c", "args", adb7);
-            this.driver.executeScript("mobile: shell", clearLogcat);
         } catch (Exception ignore) {
         }
         return deviceName;
@@ -813,8 +831,17 @@ public class BaseTest {
     public void logCatLinux(String ip) throws IOException, InterruptedException {
         List<LogEntry> logEntries = driver.manage().logs().get("logcat").getAll();
         for (LogEntry logEntry : logEntries) {
-//            if (logEntry.toString().contains("died"))
+            if (logEntry.toString().contains("DRM")){
             System.out.println(logEntry);
+                List<String> adb10 = Arrays.asList("");
+                Map<String, Object> clearLogcat2 = ImmutableMap.of("command", "logcat -c", "args", adb10);
+                this.driver.executeScript("mobile: shell", clearLogcat2);
+                Thread.sleep(60000);
+
+        }
+            driver.pressKey(new KeyEvent(AndroidKey.CHANNEL_UP));
+            Log.info("--- Zapping up ---");
+            Thread.sleep(4000);
         }
     }
 
@@ -833,9 +860,9 @@ public class BaseTest {
 
             // run the Unix "ps -ef" command
             // using the Runtime exec method:
-            Process c = Runtime.getRuntime().exec("adb -s " + ip + " logcat -c");
+//            Process c = Runtime.getRuntime().exec("adb -s " + ip + " logcat -c");
 
-            Process p = Runtime.getRuntime().exec("adb -s " + ip + " logcat | grep 'Player is buffering'");
+            Process p = Runtime.getRuntime().exec("adb -s " + ip + "logcat");
 
             BufferedReader stdInput = new BufferedReader(new
                     InputStreamReader(p.getInputStream()));
@@ -844,18 +871,35 @@ public class BaseTest {
                     InputStreamReader(p.getErrorStream()));
             // read the output from the command
             while ((s = stdInput.readLine()) != null) {
-
-                if (s.contains("Player is buffering")) {
-                    Log.info(" **********  YOU ARE IN A LIVE CHANNEL  **********");
-                } else if (s.contains("Player is paused")) {
-                    Log.info(" **********  YOU ARE IN A PAUSE MODE  **********");
-                } else if (s.contains("Player is resumed")) {
-                    Log.info(" **********  YOU ARE IN RESUME MODE/PLAY MODE  **********");
-                } else if (s.contains("keycode=89")) {
-                    Log.info(" **********  REWIND  **********");
-                } else if (s.contains("keycode=90")) {
-                    Log.info(" **********  FAST FORWARD  **********");
+                    if (s.contains("DRM")){
+                        takeScreenShot();
+                        Log.info("DRM ERROR" +s);
+                        SendEmail.sendmail("DRM ERROR " + s,"eyal.avramchik@partner.co.il","DRM ERROR");
+                        Thread.sleep(60000);
+                        List<String> adb10 = Arrays.asList("");
+                        Map<String, Object> clearLogcat2 = ImmutableMap.of("command", "logcat -c", "args", adb10);
+                        this.driver.executeScript("mobile: shell", clearLogcat2);
                 }
+//                    else if (s.contains("error_code:#PBA")){
+//                        takeScreenShot();
+//                        Log.info("PBA ERROR");
+//                        SendEmail.sendmail("PBA ERROR","eyal.avramchik@partner.co.il","PBA ERROR");
+//                        Thread.sleep(60000);
+//                    }
+//                if (s.contains("Player is buffering")) {
+//                    Log.info(" **********  YOU ARE IN A LIVE CHANNEL  **********");
+//                } else if (s.contains("Player is paused")) {
+//                    Log.info(" **********  YOU ARE IN A PAUSE MODE  **********");
+//                } else if (s.contains("Player is resumed")) {
+//                    Log.info(" **********  YOU ARE IN RESUME MODE/PLAY MODE  **********");
+//                } else if (s.contains("keycode=89")) {
+//                    Log.info(" **********  REWIND  **********");
+//                } else if (s.contains("keycode=90")) {
+//                    Log.info(" **********  FAST FORWARD  **********");
+//                }
+                driver.pressKey(new KeyEvent(AndroidKey.CHANNEL_UP));
+                Log.info("--- Zapping up ---");
+                Thread.sleep(3000);
             }
 
             // read any errors from the attempted command
@@ -865,7 +909,7 @@ public class BaseTest {
 //            }
 
 //            System.exit(0);
-        } catch (IOException e) {
+        } catch (IOException | InterruptedException e) {
             System.out.println("exception happened - here's what I know: ");
             e.printStackTrace();
             System.exit(-1);
@@ -881,7 +925,7 @@ public class BaseTest {
             // using the Runtime exec method:
             Process c = Runtime.getRuntime().exec("adb -s " + ip + " logcat -c");
 
-            Process p = Runtime.getRuntime().exec("adb -s " + ip + " shell top -n 1 | grep 'lge.tr069c.partner'");
+            Process p = Runtime.getRuntime().exec("adb -s " + ip + " shell top -n 1 | grep 'System'");
 
             BufferedReader stdInput = new BufferedReader(new
                     InputStreamReader(p.getInputStream()));
@@ -893,11 +937,14 @@ public class BaseTest {
 
 
                 String[] splited = n.split("\\s+");
-               if (!splited[5].contains("0%")) {
+                String sum = splited[1];
+//                Integer.parseInt(sum.substring(0,2));
+//               if (!splited[5].contains("0%")) {
+                Log.info(sum);
 
-                    Log.info(splited[5] + " "+ ip + " " + deviceName);
+//                    Log.info("Total Cpu Usage is:  " + splited[5] + "   and the STB IP is: "+ ip + " and the STB name is: " + deviceName);
                 }
-            }
+//            }
 //                } else if (n.contains("Player is paused")) {
 //                    Log.info(" **********  YOU ARE IN A PAUSE MODE  **********");
 //
@@ -917,7 +964,128 @@ public class BaseTest {
             System.exit(-1);
         }
     }
+    public void DRM(String ip) {
+        ProcessBuilder processBuilder = new ProcessBuilder();//DRM
 
 
+        processBuilder.command("bash", "-c", "adb -s " + ip + " logcat -d | grep DRM");
+        try {
+            driver.pressKey(new KeyEvent(AndroidKey.CHANNEL_UP));
+            Log.info("--- Zapping up ---");
+            Thread.sleep(4000);
+            Process process = processBuilder.start();
+
+            StringBuilder output = new StringBuilder();
+
+            BufferedReader reader = new BufferedReader(
+                    new InputStreamReader(process.getInputStream()));
+
+            String line;
+            while ((line = reader.readLine()) != null) {
+             System.out.println(output.append(line));
+                takeScreenShot();
+                Log.info("First screenshot of the DRM error");
+                SendEmail.sendmail(output.toString(),"eyal.avramchik@partner.co.il","DRM Error cacthed");
+                List<String> adb10 = Arrays.asList("");
+                Map<String, Object> clearLogcat2 = ImmutableMap.of("command", "logcat -c", "args", adb10);
+                this.driver.executeScript("mobile: shell", clearLogcat2);
+            }
+
+
+            int exitVal = process.waitFor();
+            if (exitVal == 0) {
+                System.out.println("Success!");
+//                System.out.println(output);
+//                System.exit(0);
+            } else {
+                //abnormal...
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+    public void pbaError(String ip) {
+        ProcessBuilder processBuilder = new ProcessBuilder();//PBA
+
+        processBuilder.command("bash", "-c", "adb -s " + ip + " logcat -d | grep error_code:#PBA");
+        try {
+
+            Process process = processBuilder.start();
+
+            StringBuilder output = new StringBuilder();
+
+            BufferedReader reader = new BufferedReader(
+                    new InputStreamReader(process.getInputStream()));
+
+            String line;
+            while ((line = reader.readLine()) != null) {
+                System.out.println(output.append(line));
+                takeScreenShot();
+                Log.info("First screenshot of PBA error before the 60 seconds");
+                SendEmail.sendmail(output.toString(),"eyal.avramchik@partner.co.il","PBA Error cacthed");
+                List<String> adb10 = Arrays.asList("");
+                Map<String, Object> clearLogcat2 = ImmutableMap.of("command", "logcat -c", "args", adb10);
+                this.driver.executeScript("mobile: shell", clearLogcat2);
+            }
+
+
+            int exitVal = process.waitFor();
+            if (exitVal == 0) {
+                System.out.println("Success!");
+//                System.out.println(output);
+//                System.exit(0);
+            } else {
+                //abnormal...
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+    public void decodingError(String ip) {
+        ProcessBuilder processBuilder = new ProcessBuilder();//PBA
+
+        processBuilder.command("bash", "-c", "adb -s " + ip + " logcat -d | grep teardown/3002");
+        try {
+
+            Process process = processBuilder.start();
+
+            StringBuilder output = new StringBuilder();
+
+            BufferedReader reader = new BufferedReader(
+                    new InputStreamReader(process.getInputStream()));
+
+            String line;
+            while ((line = reader.readLine()) != null) {
+                System.out.println(output.append(line));
+                takeScreenShot();
+                Log.info("First screenshot of the Decoding error");
+                SendEmail.sendmail(output.toString(),"eyal.avramchik@partner.co.il","Decoding Error cacthed");
+                List<String> adb10 = Arrays.asList("");
+                Map<String, Object> clearLogcat2 = ImmutableMap.of("command", "logcat -c", "args", adb10);
+                this.driver.executeScript("mobile: shell", clearLogcat2);
+            }
+
+
+            int exitVal = process.waitFor();
+            if (exitVal == 0) {
+                System.out.println("Success!");
+//                System.out.println(output);
+//                System.exit(0);
+            } else {
+                //abnormal...
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
 }
 //        if (i == 0) System.out.println("Nothing read from input stream");

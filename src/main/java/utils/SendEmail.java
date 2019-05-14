@@ -70,7 +70,7 @@ public class SendEmail {
             MimeBodyPart messageBodyPart2 = new MimeBodyPart();
 
             // Mention the file which you want to send
-            String filename = "C:\\Users\\OSN20933\\IdeaProjects\\test\\screenshots\\1.txt";
+            String filename = "/home/eyal/IdeaProjects/AutomationSTB/Idea_logs/log.log";
 
             // Create data source and pass the filename
             DataSource source = new FileDataSource(filename);

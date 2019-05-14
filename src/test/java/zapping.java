@@ -14,9 +14,9 @@ public class zapping extends BaseTest {
     public zapping() throws IOException {
     }
 
-    @Parameters({"deviceName"})
+    @Parameters({"deviceName","ip"})
     @Test(description = "zap and watch and fast forward and rewind",priority = 1,alwaysRun=true)
-    public void zap(String deviceName) throws InterruptedException, IOException {
+    public void zap(String deviceName,String ip) throws InterruptedException, IOException {
 //        try{
 //            findImage();
 //        } catch (Exception ignore) {
@@ -27,25 +27,21 @@ public class zapping extends BaseTest {
         Log.info("--- Waiting for IFS to load ... --- ");
 //        WebDriverWait wait = new WebDriverWait(driver, 20);
 //        wait.until(ExpectedConditions.visibilityOfElementLocated((By.id("exo_content_frame"))));
-        Thread.sleep(20000);
         String activity = driver.currentActivity();
         Boolean act = activity.equals("com.ifeelsmart.common.IFSNativeActivityImpl");
 
         while (act) {
             activity = driver.currentActivity();
             act = activity.equals("com.ifeelsmart.common.IFSNativeActivityImpl");
-            Thread.sleep(10000);
-            driver.pressKey(new KeyEvent(AndroidKey.CHANNEL_UP));
-            Log.info("--- Zapping up ---");
-            Thread.sleep(4000);
-            driver.pressKey(new KeyEvent(AndroidKey.CHANNEL_UP));
-            Log.info("--- Zapping up ---");
-            Thread.sleep(4000);
-            driver.pressKey(new KeyEvent(AndroidKey.CHANNEL_DOWN));
-            Log.info("--- Zapping down ---");
-            Log.info(" 100 seconds watching ... ");
-            Thread.sleep(100000);
-            fastRewind();
+            pbaError(ip);
+            decodingError(ip);
+//            monitorErrors(deviceName,ip);
+//            driver.pressKey(new KeyEvent(AndroidKey.CHANNEL_DOWN));
+//            Log.info("--- Zapping down ---");
+//            Log.info(" 100 seconds watching ... ");
+//            Thread.sleep(100000);
+//            memoryTest(ip,deviceName);
+//            fastRewind();
         }
         takeScreenShot();
         ifscrashed();

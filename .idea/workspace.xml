@@ -3,9 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="4ee773a6-0a46-4239-98a0-7590a264ac3c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Web/voltBaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Web/voltBaseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/utils/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Play_Pause_Live.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Play_Pause_Live.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/SendEmail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/SendEmail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/zapping.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/zapping.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/utils/SendEmail.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/utils/SendEmail.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/zapping.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/zapping.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -21,21 +24,8 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/utils/BaseTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="124" column="48" selection-start-line="124" selection-start-column="48" selection-end-line="124" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/testng.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="33" column="41" lean-forward="true" selection-start-line="33" selection-start-column="41" selection-end-line="33" selection-end-column="41" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/screenshots/14-May-2019__12_02_28AM.png">
+          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
     </leaf>
@@ -68,13 +58,16 @@
       <find>ping</find>
       <find>ping fails\</find>
       <find>ping fails</find>
-      <find>PBA</find>
       <find>Player is stopped</find>
       <find>Player is idling</find>
       <find>pause</find>
       <find>keycode</find>
-      <find>ifs_result</find>
       <find>tr069</find>
+      <find>timeout</find>
+      <find>TIMEOUT</find>
+      <find>ifs_result</find>
+      <find>ifs_result_</find>
+      <find>PBA</find>
     </findStrings>
   </component>
   <component name="Git.Rebase.Settings">
@@ -87,20 +80,20 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/utils/SendEmail.java" />
         <option value="$PROJECT_DIR$/src/test/java/netflixPlay.java" />
         <option value="$PROJECT_DIR$/src/main/java/utils/performanceTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/utils/ScreenshotState.java" />
         <option value="$PROJECT_DIR$/src/main/java/utils/TemplateMatching.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Web/voltBaseTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/utils/AppiumServer.java" />
         <option value="$PROJECT_DIR$/src/main/java/utils/BaseTestNetflix.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/LiveAllNight.java" />
-        <option value="$PROJECT_DIR$/src/test/java/zapping.java" />
         <option value="$PROJECT_DIR$/src/main/java/utils/FactoryClasses/keyCode.java" />
         <option value="$PROJECT_DIR$/src/test/java/Play_Pause_Live.java" />
         <option value="$PROJECT_DIR$/src/main/java/utils/Log.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Web/voltBaseTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/utils/SendEmail.java" />
+        <option value="$PROJECT_DIR$/src/test/java/zapping.java" />
         <option value="$PROJECT_DIR$/testng.xml" />
         <option value="$PROJECT_DIR$/src/main/java/utils/BaseTest.java" />
       </list>
@@ -120,6 +113,17 @@
       </MavenImportingSettings>
     </option>
   </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="STB" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="10" />
     <option name="y" value="20" />
@@ -134,8 +138,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -187,6 +189,14 @@
               <item name="AutomationSTB" type="b2602c69:ProjectViewProjectNode" />
               <item name="AutomationSTB" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AutomationSTB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AutomationSTB" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -196,33 +206,12 @@
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="AutomationSTB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AutomationSTB" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AutomationSTB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AutomationSTB" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="generated-sources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AutomationSTB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AutomationSTB" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="generated-test-sources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AutomationSTB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AutomationSTB" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="test-classes" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -233,7 +222,8 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -298,6 +288,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="voltBaseTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <output_file path="$PROJECT_DIR$/Idea_logs" is_save="true" />
+      <module name="AutomationSTB" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Web.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="Web" />
+      <option name="MAIN_CLASS_NAME" value="Web.voltBaseTest" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="voltBaseTest.logIn" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="STB" />
       <extension name="coverage">
@@ -318,11 +334,13 @@
     </configuration>
     <list>
       <item itemvalue="TestNG./home/eyal/IdeaProjects/AutomationSTB/testng.xml" />
+      <item itemvalue="TestNG.voltBaseTest" />
       <item itemvalue="TestNG.voltBaseTest.logIn" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="TestNG./home/eyal/IdeaProjects/AutomationSTB/testng.xml" />
+        <item itemvalue="TestNG.voltBaseTest" />
         <item itemvalue="TestNG.voltBaseTest.logIn" />
       </list>
     </recent_temporary>
@@ -387,38 +405,45 @@
       <option name="project" value="LOCAL" />
       <updated>1555340479219</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="- Adding support for getting apps cpu usage %&#10;- Adding monitor for ping to Partner dns and to default gateway&#10;- Monitor all the errors&#10;- Catch screenshot of the errors in real time&#10;- support for a few STB'S in parallel">
+      <created>1556692720586</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1556692720586</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="_home_eyal_IdeaProjects_AutomationSTB_testng_xml - 2019.05.01 at 09h 10m 54s.xml">
+    <history-entry file="_home_eyal_IdeaProjects_AutomationSTB_testng_xml - 2019.05.12 at 17h 37m 41s.xml">
       <configuration name="/home/eyal/IdeaProjects/AutomationSTB/testng.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="_home_eyal_IdeaProjects_AutomationSTB_testng_xml - 2019.05.01 at 09h 13m 06s.xml">
+    <history-entry file="_home_eyal_IdeaProjects_AutomationSTB_testng_xml - 2019.05.12 at 17h 38m 34s.xml">
       <configuration name="/home/eyal/IdeaProjects/AutomationSTB/testng.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="_home_eyal_IdeaProjects_AutomationSTB_testng_xml - 2019.05.01 at 09h 14m 08s.xml">
+    <history-entry file="_home_eyal_IdeaProjects_AutomationSTB_testng_xml - 2019.05.12 at 17h 38m 51s.xml">
       <configuration name="/home/eyal/IdeaProjects/AutomationSTB/testng.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="_home_eyal_IdeaProjects_AutomationSTB_testng_xml - 2019.05.01 at 09h 14m 42s.xml">
+    <history-entry file="_home_eyal_IdeaProjects_AutomationSTB_testng_xml - 2019.05.12 at 17h 39m 19s.xml">
       <configuration name="/home/eyal/IdeaProjects/AutomationSTB/testng.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="_home_eyal_IdeaProjects_AutomationSTB_testng_xml - 2019.05.01 at 09h 15m 03s.xml">
+    <history-entry file="_home_eyal_IdeaProjects_AutomationSTB_testng_xml - 2019.05.12 at 17h 40m 08s.xml">
       <configuration name="/home/eyal/IdeaProjects/AutomationSTB/testng.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="_home_eyal_IdeaProjects_AutomationSTB_testng_xml - 2019.05.01 at 09h 15m 25s.xml">
+    <history-entry file="_home_eyal_IdeaProjects_AutomationSTB_testng_xml - 2019.05.13 at 10h 56m 46s.xml">
       <configuration name="/home/eyal/IdeaProjects/AutomationSTB/testng.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="_home_eyal_IdeaProjects_AutomationSTB_testng_xml - 2019.05.01 at 09h 16m 32s.xml">
+    <history-entry file="_home_eyal_IdeaProjects_AutomationSTB_testng_xml - 2019.05.13 at 11h 21m 04s.xml">
       <configuration name="/home/eyal/IdeaProjects/AutomationSTB/testng.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="_home_eyal_IdeaProjects_AutomationSTB_testng_xml - 2019.05.01 at 09h 17m 01s.xml">
+    <history-entry file="_home_eyal_IdeaProjects_AutomationSTB_testng_xml - 2019.05.13 at 11h 32m 00s.xml">
       <configuration name="/home/eyal/IdeaProjects/AutomationSTB/testng.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="_home_eyal_IdeaProjects_AutomationSTB_testng_xml - 2019.05.01 at 09h 18m 42s.xml">
+    <history-entry file="_home_eyal_IdeaProjects_AutomationSTB_testng_xml - 2019.05.13 at 12h 47m 29s.xml">
       <configuration name="/home/eyal/IdeaProjects/AutomationSTB/testng.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="_home_eyal_IdeaProjects_AutomationSTB_testng_xml - 2019.05.01 at 09h 18m 52s.xml">
+    <history-entry file="_home_eyal_IdeaProjects_AutomationSTB_testng_xml - 2019.05.14 at 03h 10m 42s.xml">
       <configuration name="/home/eyal/IdeaProjects/AutomationSTB/testng.xml" configurationId="TestNG" />
     </history-entry>
   </component>
@@ -434,7 +459,7 @@
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2899834" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.34255672" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -443,191 +468,200 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4964029" visible="true" weight="0.4384449" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49584946" weight="0.45788336" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39848813" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32937366" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32937366" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50359714" side_tool="true" weight="0.44276458" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5041505" side_tool="true" weight="0.43196544" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32937366" />
       <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.4969563" weight="0.32829374" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Maven" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Maven" order="7" weight="0.32982844" />
     </layout>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="- Add the code clean, short&#10;- Add support for multiple STB'S that will run togather&#10;- Add clear logs&#10;- Logcat is starting automatically&#10;- Option to start every device with diffrent tests&#10;- add optimization for the code - quicker&#10;- add the option to have screenshot from STB in every place&#10;- add the option to run the code from jenkins&#10;- easy access to logcat for each device (unique name)" />
     <MESSAGE value="-Add support for linux enviroment&#10;-Add support for pause/resume/live&#10;-Fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="-Add support for linux enviroment&#10;-Add support for pause/resume/live&#10;-Fixes" />
+    <MESSAGE value="- Adding support for getting apps cpu usage %&#10;- Adding monitor for ping to Partner dns and to default gateway&#10;- Monitor all the errors&#10;- Catch screenshot of the errors in real time&#10;- support for a few STB'S in parallel" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Adding support for getting apps cpu usage %&#10;- Adding monitor for ping to Partner dns and to default gateway&#10;- Monitor all the errors&#10;- Catch screenshot of the errors in real time&#10;- support for a few STB'S in parallel" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/screenshots/30-Apr-2019__04_03_38PM.png">
+    <entry file="file://$PROJECT_DIR$/screenshots/07-May-2019__02_46_27PM.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/screenshots/30-Apr-2019__04_03_02PM.png">
+    <entry file="file://$PROJECT_DIR$/screenshots/07-May-2019__05_03_39PM.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/screenshots/30-Apr-2019__04_02_02PM.png">
+    <entry file="file://$PROJECT_DIR$/screenshots/07-May-2019__05_04_48PM.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/screenshots/30-Apr-2019__04_24_56PM.png">
+    <entry file="file://$PROJECT_DIR$/screenshots/07-May-2019__05_04_53PM.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/screenshots/30-Apr-2019__04_29_38PM.png">
+    <entry file="file://$PROJECT_DIR$/screenshots/07-May-2019__05_06_00PM.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/screenshots/30-Apr-2019__04_25_39PM.png">
+    <entry file="file://$PROJECT_DIR$/screenshots/07-May-2019__05_06_05PM.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/screenshots/30-Apr-2019__04_39_24PM.png">
+    <entry file="file://$PROJECT_DIR$/screenshots/07-May-2019__05_07_11PM.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/screenshots/30-Apr-2019__04_44_01PM.png">
+    <entry file="file://$PROJECT_DIR$/screenshots/07-May-2019__05_07_16PM.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/screenshots/30-Apr-2019__04_12_17PM.png">
+    <entry file="file://$PROJECT_DIR$/screenshots/07-May-2019__05_08_23PM.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/screenshots/30-Apr-2019__04_11_10PM.png">
+    <entry file="file://$PROJECT_DIR$/screenshots/07-May-2019__05_08_28PM.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/screenshots/30-Apr-2019__04_57_55PM.png">
+    <entry file="file://$PROJECT_DIR$/screenshots/07-May-2019__05_09_34PM.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/screenshots/30-Apr-2019__04_59_54PM.png">
+    <entry file="file://$PROJECT_DIR$/screenshots/12-May-2019__11_53_51AM.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/screenshots/29-Apr-2019__03_48_26PM.png">
+    <entry file="file://$PROJECT_DIR$/screenshots/12-May-2019__11_52_45AM.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/screenshots/30-Apr-2019__06_22_30PM.png">
+    <entry file="file://$PROJECT_DIR$/screenshots/12-May-2019__11_52_40AM.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/screenshots/30-Apr-2019__06_22_15PM.png">
+    <entry file="file://$PROJECT_DIR$/screenshots/12-May-2019__11_51_32AM.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/screenshots/30-Apr-2019__05_49_27PM.png">
+    <entry file="file://$PROJECT_DIR$/screenshots/12-May-2019__03_18_20PM.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/screenshots/30-Apr-2019__05_48_51PM.png">
+    <entry file="file://$PROJECT_DIR$/screenshots/12-May-2019__03_18_15PM.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/screenshots/30-Apr-2019__05_49_04PM.png">
+    <entry file="file://$PROJECT_DIR$/screenshots/12-May-2019__03_17_10PM.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/screenshots/30-Apr-2019__05_50_11PM.png">
+    <entry file="file://$PROJECT_DIR$/screenshots/12-May-2019__03_17_06PM.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/screenshots/30-Apr-2019__05_50_17PM.png">
+    <entry file="file://$PROJECT_DIR$/screenshots/12-May-2019__03_16_12PM.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/screenshots/30-Apr-2019__05_51_56PM.png">
+    <entry file="file://$PROJECT_DIR$/screenshots/12-May-2019__03_16_00PM.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/screenshots/30-Apr-2019__05_52_33PM.png">
+    <entry file="file://$PROJECT_DIR$/screenshots/12-May-2019__03_15_55PM.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/screenshots/30-Apr-2019__05_52_49PM.png">
+    <entry file="file://$PROJECT_DIR$/screenshots/12-May-2019__03_14_48PM.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/screenshots/30-Apr-2019__05_55_05PM.png">
+    <entry file="file://$PROJECT_DIR$/screenshots/12-May-2019__03_14_43PM.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/screenshots/30-Apr-2019__05_55_20PM.png">
+    <entry file="file://$PROJECT_DIR$/screenshots/12-May-2019__03_13_36PM.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/screenshots/30-Apr-2019__06_02_58PM.png">
+    <entry file="file://$PROJECT_DIR$/screenshots/12-May-2019__03_08_40PM.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/screenshots/30-Apr-2019__06_05_16PM.png">
+    <entry file="file://$PROJECT_DIR$/screenshots/12-May-2019__03_07_28PM.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/screenshots/30-Apr-2019__06_17_54PM.png">
+    <entry file="file://$PROJECT_DIR$/screenshots/12-May-2019__01_21_49PM.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/screenshots/30-Apr-2019__06_23_58PM.png">
+    <entry file="file://$PROJECT_DIR$/screenshots/12-May-2019__01_20_42PM.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/screenshots/30-Apr-2019__06_52_24PM.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/screenshots/30-Apr-2019__06_52_54PM.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/screenshots/30-Apr-2019__06_53_29PM.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/screenshots/30-Apr-2019__06_56_03PM.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/screenshots/30-Apr-2019__06_56_08PM.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/screenshots/30-Apr-2019__06_56_18PM.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/screenshots/30-Apr-2019__06_56_33PM.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/screenshots/30-Apr-2019__06_58_17PM.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/screenshots/30-Apr-2019__07_00_20PM.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/screenshots/30-Apr-2019__07_00_35PM.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/screenshots/30-Apr-2019__07_02_20PM.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/screenshots/30-Apr-2019__07_02_40PM.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/screenshots/30-Apr-2019__07_04_41PM.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/screenshots/30-Apr-2019__07_04_55PM.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/screenshots/30-Apr-2019__07_06_51PM.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/screenshots/30-Apr-2019__07_07_07PM.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/screenshots/30-Apr-2019__07_08_51PM.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/screenshots/30-Apr-2019__07_09_07PM.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/screenshots/30-Apr-2019__08_11_26PM.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/screenshots/30-Apr-2019__10_59_50PM.png">
+    <entry file="file://$PROJECT_DIR$/screenshots/07-May-2019__12_44_12PM.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/testng.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="33" column="41" lean-forward="true" selection-start-line="33" selection-start-column="41" selection-end-line="33" selection-end-column="41" />
+        <state relative-caret-position="150">
+          <caret line="34" column="43" lean-forward="true" selection-start-line="34" selection-start-column="43" selection-end-line="34" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/screenshots/13-May-2019__11_14_03AM.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/screenshots/13-May-2019__11_15_10AM.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/screenshots/13-May-2019__11_15_18AM.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/screenshots/13-May-2019__11_16_25AM.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/screenshots/13-May-2019__11_16_32AM.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/screenshots/13-May-2019__11_17_39AM.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/screenshots/13-May-2019__11_17_47AM.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/screenshots/13-May-2019__11_18_53AM.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/zapping.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="35" column="25" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
+          <folding>
+            <element signature="method#ifscrashed#0;class#zapping#0" />
+            <element signature="e#2197#3033#1" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/utils/BaseTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="124" column="48" selection-start-line="124" selection-start-column="48" selection-end-line="124" selection-end-column="48" />
+        <state relative-caret-position="150">
+          <caret line="986" column="62" selection-start-line="986" selection-start-column="62" selection-end-line="986" selection-end-column="62" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/screenshots/14-May-2019__03_10_37AM.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/screenshots/14-May-2019__03_10_24AM.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/screenshots/14-May-2019__03_04_35AM.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/screenshots/14-May-2019__01_31_56AM.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/screenshots/14-May-2019__01_31_41AM.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/screenshots/13-May-2019__11_49_41AM.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/screenshots/13-May-2019__11_18_58AM.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/screenshots/13-May-2019__11_20_04AM.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/screenshots/13-May-2019__11_48_33AM.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/screenshots/14-May-2019__12_02_28AM.png">
+      <provider selected="true" editor-type-id="images" />
     </entry>
   </component>
   <component name="masterDetails">
@@ -682,7 +716,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>STB</last-edited>
+          <last-edited>AutomationSTB</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
